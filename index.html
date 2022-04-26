@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fettuccine Alfredo🍝</title>
+    <style>
+      h1 {
+        color: #ed955f;
+        text-align: center;
+      }
+
+      h2 {
+        color: #ed955f;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 5px;
+        text-align: center;
+      }
+
+      img {
+        border-right: 1px solid #d6d6d6;
+        border-left: 1px solid #d6d6d6;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 2px;
+      }
+
+      p {
+        font-size: 12px;
+        margin: 12px 0 2px;
+        line-height: 1.5;
+      }
+
+      a {
+        color: #ed955f;
+        font-size: 10px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        background: #ed955f;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+        color: white;
+        display: block;
+        font-family: cursive;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        margin: 15px auto;
+        padding: 10px 15px;
+        transition: all 200ms ease-in-out;
+        width: 100px;
+      }
+
+      button:hover {
+        background: white;
+        color: #ed955f;
+        cursor: pointer;
+        opacity: 0.8;
+      }
+
+      span {
+        font-family: monospace;
+        font-size: 12px;
+      }
+
+      hr {
+        background: #ed955f;
+        border: 0;
+        height: 1px;
+        opacity: 0.2;
+        width: 60%;
+      }
+
+      .conainer {
+        background: radial-gradient(
+          300px at 50% 50%,
+          rgba(58, 219, 154, 0.93) 2%,
+          rgb(153, 228, 208) 38.6%,
+          rgba(142, 246, 219, 0.82) 73.9%,
+          rgb(253, 255, 238) 100.7%
+        );
+        border-radius: 8px;
+        font-family: cursive;
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 15px 60px;
+      }
+
+      .footer {
+        font-size: 8px;
+        margin: 5px auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conainer">
+      <h1>I love pasta</h1>
+      <h2>Especially Fettuccine Alfredo</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/031/499/original/shrimp-alfredo-pasta.jpg?1649594722"
+        alt="Shrimp Alfredo Pasta"
+      />
+      <p>
+        <strong>Fettuccine Alfredo</strong>
+        or fettuccine al burro is an Italian pasta dish of fresh fettuccine
+        tossed with butter and Parmesan cheese. As the cheese melts, it
+        emulsifies the liquids to form a smooth and rich cheese sauce coating
+        the pasta.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Fettuccine_Alfredo"
+        target="_blank"
+      >
+        😋 Read more on <em>wikipedia</em>
+      </a>
+      <button>Recipe</button>
+      <hr />
+      <p class="footer">Coded by <span>Nazanin Naghavi</span></p>
+    </div>
+    <script>
+      function getRecipe() {
+        let name = prompt("What's your name?");
+        let shrimp = prompt("Are you allergic to shrimp?");
+        shrimp = shrimp.toLowerCase();
+        shrimp = shrimp.trim();
+        shrimp = shrimp.replace("ya", "yes");
+        if (shrimp === "yes") {
+          alert(name + " taste chicken alfredo! 😋🍗");
+        } else {
+          alert(name + " taste shrimp alfredo! 😋🦐");
+        }
+      }
+      let recipe = document.querySelector("button");
+      recipe.addEventListener("click", getRecipe);
+    </script>
+  </body>
+</html>
